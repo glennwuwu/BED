@@ -1,0 +1,94 @@
+
+.card {
+	border-radius: 5px;
+	background-color: #fff;
+	padding-left: 60px;
+	padding-right: 60px;
+	margin-top: 30px;
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+
+.rating-box {
+	background-color: #FBC02D;
+	color: #fff;
+}
+
+.rating-label {
+	font-weight: bold;
+}
+
+/* Rating bar width */
+.rating-bar {
+	width: 300px;
+	padding: 8px;
+	border-radius: 5px;
+}
+
+/* The bar container */
+.bar-container {
+  width: 100%;
+  background-color: #f1f1f1;
+  text-align: center;
+  color: white;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-bottom: 5px;
+}
+
+/* Individual bars */
+.bar {
+	/* width: 70%; <-- edit with js */
+	height: 13px;
+	background-color: #FBC02D; 
+	border-radius: 20px;
+
+}
+td {
+	padding-bottom: 10px;
+}
+
+.star-active {
+	color: #FBC02D;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.star-active:hover {
+	color: #F9A825;
+	cursor: pointer;
+}
+
+.star-inactive {
+	color: #CFD8DC;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.star-inactive:hover {
+	color: #BECFCA;
+	cursor: pointer;
+}
+
+.blue-text {
+	color: #0091EA;
+}
+
+.content {
+	font-size: 18px;
+}
+
+.profile-pic {
+	width: 90px;
+	height: 90px;
+	border-radius: 100%;
+}
+ 
+.pic {
+	width: 80px;
+	height: 80px;
+}
+
+.vote {
+	cursor: pointer;
+}

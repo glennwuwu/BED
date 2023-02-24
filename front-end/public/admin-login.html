@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>DVD Catalogue - Admin Login</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="apple-touch-icon" href="../assets/img/apple-icon.png" />
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="assets/img/favicon.ico"
+    />
+
+    <link rel="stylesheet" href="../assets/css/login.css" />
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../assets/css/templatemo.css" />
+
+    <!-- Load fonts style after rendering the layout styles -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap"
+    />
+    <link rel="stylesheet" href="../assets/css/fontawesome.min.css" />
+    
+    <!-- axios -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <!-- jquery -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- hostname and port config -->
+    <script src="assets/scripts/config.js" defer></script>
+
+    <script src="assets/scripts/login.js" defer></script>
+  </head>
+  <!--
+
+TemplateMo 559 DVD catalogue
+
+https://templatemo.com/tm-559-zay-catalogue
+
+-->
+
+  <body>
+    <!-- Start Top Nav -->
+    <nav
+      class="navbar navbar-expand-lg bg-dark navbar-light d-none d-lg-block"
+      id="templatemo_nav_top"
+    >
+      <div class="container text-light">
+        <div class="w-100 d-flex justify-content-between">
+          <div>
+            <i class="fa fa-envelope mx-2"></i>
+            <a
+              class="navbar-sm-brand text-light text-decoration-none"
+              href="mailto:info@company.com"
+              >info@company.com</a
+            >
+            <i class="fa fa-phone mx-2"></i>
+            <a
+              class="navbar-sm-brand text-light text-decoration-none"
+              href="tel:010-020-0340"
+              >010-020-0340</a
+            >
+          </div>
+          <div>
+            <a
+              class="text-light"
+              href="https://fb.com/templatemo"
+              target="_blank"
+              rel="sponsored"
+              ><i class="fab fa-facebook-f fa-sm fa-fw me-2"></i
+            ></a>
+            <a
+              class="text-light"
+              href="https://www.instagram.com/"
+              target="_blank"
+              ><i class="fab fa-instagram fa-sm fa-fw me-2"></i
+            ></a>
+            <a class="text-light" href="https://twitter.com/" target="_blank"
+              ><i class="fab fa-twitter fa-sm fa-fw me-2"></i
+            ></a>
+            <a
+              class="text-light"
+              href="https://www.linkedin.com/"
+              target="_blank"
+              ><i class="fab fa-linkedin fa-sm fa-fw"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- Close Top Nav -->
+
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg navbar-light shadow">
+      <div class="container d-flex justify-content-between align-items-center">
+        <a
+          class="navbar-brand text-success logo h1 align-self-center"
+          href="index.html"
+        >
+          DVD
+        </a>
+      </div>
+    </nav>
+    <!-- Close Header -->
+
+    <section class="bg-white">
+      <div class="container">
+        <div class="row justify-content-center">
+          <section class="ftco-section">
+            <div class="container">
+              <div class="row justify-content-center"></div>
+              <div class="row justify-content-center">
+                <div class="col-md-12 col-lg-10">
+                  <div class="wrap d-md-flex">
+                    <div
+                      class="img"
+                      style="background-image: url(../assets/img/vinyl.jpg)"
+                    ></div>
+                    <div class="login-wrap p-4 p-md-5">
+                      <div class="d-flex">
+                        <div class="w-100">
+                          <h3 class="mb-4">Admin Sign In</h3>
+                        </div>
+                        <div class="w-100">
+                          <!-- <p class="social-media d-flex justify-content-end">
+                            <a
+                              href="#"
+                              class="social-icon d-flex align-items-center justify-content-center"
+                              ><span class="fa fa-facebook"></span
+                            ></a>
+                            <a
+                              href="#"
+                              class="social-icon d-flex align-items-center justify-content-center"
+                              ><span class="fa fa-twitter"></span
+                            ></a>
+                          </p> -->
+                        </div>
+                      </div>
+                      <form action="#" class="signin-form">
+                        <div class="form-group mb-3">
+                          <label class="label" for="email">Email</label>
+                          <input
+                            type="text"
+                            id="email"
+                            class="form-control"
+                            placeholder="Email"
+                            required=""
+                          />
+                        </div>
+                        <div class="form-group mb-3">
+                          <label class="label" for="password">Password</label>
+                          <input
+                            type="password"
+                            id="password"
+                            class="form-control"
+                            placeholder="Password"
+                            required=""
+                          />
+                        </div>
+                        <div class="form-group">
+                          <button
+                            id="admin-login"
+                            type="submit"
+                            class="form-control btn btn-primary rounded submit px-3"
+                          >
+                            Sign In
+                          </button>
+                        </div>
+                        <!-- <div class="form-group d-md-flex">
+                          <div class="w-50 text-left">
+                            <label class="checkbox-wrap checkbox-primary mb-0"
+                              >Remember Me
+                              <input type="checkbox" checked="" />
+                              <span class="checkmark"></span>
+                            </label>
+                          </div>
+                          <div class="w-50 text-md-right">
+                            <a href="#">Forgot Password</a>
+                          </div>
+                        </div> -->
+                      </form>
+                      <p class="text-center text-danger" id="incorrect-login"></p>
+                      <p class="text-center">
+                        Customer?
+                        <a data-toggle="tab" href="login.html?#">Sign In</a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </section>
+    <!-- Close Banner -->
+
+    <!-- Start Footer -->
+    <footer class="bg-dark" id="tempaltemo_footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 pt-5">
+            <h2 class="h2 text-success border-bottom pb-3 border-light logo">
+              DVD catalogue
+            </h2>
+            <ul class="list-unstyled text-light footer-link-list">
+              <li>
+                <i class="fas fa-map-marker-alt fa-fw"></i>
+                123 Consectetur at ligula 10660
+              </li>
+              <li>
+                <i class="fa fa-phone fa-fw"></i>
+                <a class="text-decoration-none" href="tel:010-020-0340"
+                  >010-020-0340</a
+                >
+              </li>
+              <li>
+                <i class="fa fa-envelope fa-fw"></i>
+                <a class="text-decoration-none" href="mailto:info@company.com"
+                  >info@company.com</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-md-4 pt-5">
+            <h2 class="h2 text-light border-bottom pb-3 border-light">
+              Further Info
+            </h2>
+            <ul class="list-unstyled text-light footer-link-list">
+              <li><a class="text-decoration-none" href="#">Home</a></li>
+              <li><a class="text-decoration-none" href="#">About Us</a></li>
+              <li>
+                <a class="text-decoration-none" href="#">Catalogue</a>
+              </li>
+              <li><a class="text-decoration-none" href="#">FAQs</a></li>
+              <li><a class="text-decoration-none" href="#">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row text-light mb-4">
+          <div class="col-12 mb-3">
+            <div class="w-100 my-3 border-top border-light"></div>
+          </div>
+          <div class="col-auto me-auto">
+            <ul class="list-inline text-left footer-icons">
+              <li
+                class="list-inline-item border border-light rounded-circle text-center"
+              >
+                <a
+                  rel="nofollow"
+                  class="text-light text-decoration-none"
+                  target="_blank"
+                  href="http://fb.com/templatemo"
+                  ><i class="fab fa-facebook-f fa-lg fa-fw"></i
+                ></a>
+              </li>
+              <li
+                class="list-inline-item border border-light rounded-circle text-center"
+              >
+                <a
+                  class="text-light text-decoration-none"
+                  target="_blank"
+                  href="https://www.instagram.com/"
+                  ><i class="fab fa-instagram fa-lg fa-fw"></i
+                ></a>
+              </li>
+              <li
+                class="list-inline-item border border-light rounded-circle text-center"
+              >
+                <a
+                  class="text-light text-decoration-none"
+                  target="_blank"
+                  href="https://twitter.com/"
+                  ><i class="fab fa-twitter fa-lg fa-fw"></i
+                ></a>
+              </li>
+              <li
+                class="list-inline-item border border-light rounded-circle text-center"
+              >
+                <a
+                  class="text-light text-decoration-none"
+                  target="_blank"
+                  href="https://www.linkedin.com/"
+                  ><i class="fab fa-linkedin fa-lg fa-fw"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-auto">
+            <label class="sr-only" for="subscribeEmail">Email address</label>
+            <div class="input-group mb-2">
+              <input
+                type="text"
+                class="form-control bg-dark border-light"
+                id="subscribeEmail"
+                placeholder="Email address"
+              />
+              <div class="input-group-text btn-success text-light">
+                Subscribe
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="w-100 bg-black py-3">
+        <div class="container">
+          <div class="row pt-2">
+            <div class="col-12">
+              <p class="text-left text-light">
+                Copyright &copy; 2021 Company Name | Designed by
+                <a
+                  rel="sponsored"
+                  href="https://templatemo.com/page/1"
+                  target="_blank"
+                  >TemplateMo</a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- End Footer -->
+
+    <!-- Start Script -->
+    <!-- <script src="assets/scripts/jquery-1.11.0.min.js"></script>
+    <script src="assets/scripts/jquery-migrate-1.2.1.min.js"></script>
+    <script src="assets/scripts/bootstrap.bundle.min.js"></script>
+    <script src="assets/scripts/templatemo.js"></script>
+    <script src="assets/scripts/custom.js"></script> -->
+    <!-- End Script -->
+  </body>
+</html>
